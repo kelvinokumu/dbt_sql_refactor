@@ -39,4 +39,4 @@ models:
   dbt_sql_refactor:
     # Applies to all files under models/example/
     example:
-      +materialized: view
+      +materialized: table
