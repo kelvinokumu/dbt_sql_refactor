@@ -15,6 +15,6 @@ transformed as (
     round(amount/100.0, 2) as payment_amount
 
     from source
-),
+)
 
 select * from transformed
