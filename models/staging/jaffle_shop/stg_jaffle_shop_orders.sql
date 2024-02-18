@@ -8,14 +8,14 @@ source as (
 
 transformed as (
 
-      select 
+      select
         id as order_id,
         user_id as customer_id,
         status as order_status,
         order_date,
 
-        case 
-            when order_status not in ('returned','return_pending') 
+        case
+            when status not in ('returned','return_pending') 
             then order_date
         end as valid_order_date,
 

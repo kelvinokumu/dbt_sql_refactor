@@ -43,7 +43,7 @@ customer_order_history as (
             then orders.order_value_dollars else 0 
         end)
         / nullif(count(case 
-            when orders.order_status not in
+            when orders.order_status not in ('returned','return_pending')
             then 1 
             end),0) as avg_non_returned_order_value,
 
